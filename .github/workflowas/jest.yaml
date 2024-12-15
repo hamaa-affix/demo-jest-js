@@ -2,30 +2,31 @@ name: jest-test
 on:
   push:
     branches:
-      - "**"
-      - "!main"
+    - "**"
+    branches-ignore:
+    - main
     paths:
-      - "js/**"
+    - "js/**"
   pull_request:
     types:
-      - opened
-      - reopened
-      - synchronize
+    - opened
+    - reopened
+    - synchronize
     branches:
-      - "**"
-      - "!main"
+    - "**"
+    branches-ignore:
+    - main
     paths:
-      - "js/**"
+    - "js/**"
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v1
         with:
           node-version: 16.x
-          cache: 'npm'
       - name: change directory
         run: cd js
       - name: Install dependencies
