@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - "**"
-    branches-ignore:
-      - main
+      - "!main"
     paths:
       - "js/**"
   pull_request:
@@ -14,8 +13,7 @@ on:
       - synchronize
     branches:
       - "**"
-    branches-ignore:
-      - main
+      - "!main"
     paths:
       - "js/**"
 jobs:
