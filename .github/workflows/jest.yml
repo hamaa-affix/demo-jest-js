@@ -1,11 +1,5 @@
 name: jest-test
 on:
-  push:
-    branches:
-      - "**"
-      - "!main"
-    paths:
-      - "js/**"
   pull_request:
     types:
       - opened
