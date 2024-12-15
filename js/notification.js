@@ -3,5 +3,5 @@ export function sum(a, b) {
 }
 
 const test = () => {
-  console.log('test1');
+  console.log('test');
 }
